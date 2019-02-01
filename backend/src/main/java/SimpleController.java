@@ -15,6 +15,14 @@ public class SimpleController {
             }
         };
 
+        Route helloGet = new Route() {
+            @Override
+            public Object handle(Request request, Response response) throws Exception {
+                String userName = request.queryParams("name");
+                return "GET hello " + userName;
+            }
+        };
+
         Route postRoute = new Route() {
             @Override
             public Object handle(Request request, Response response) throws Exception {
@@ -22,8 +30,18 @@ public class SimpleController {
             }
         };
 
+        Route helloPost = new Route() {
+            @Override
+            public Object handle(Request request, Response response) throws Exception {
+                String userName = request.queryParams("name");
+                return "POST hello " + userName;
+            }
+        };
+
         get("/simpleGet", getRoute);
+        get("/helloGet", helloGet);
         post("/simplePost", postRoute);
+        post("/helloPost", helloPost);
     }
 
 

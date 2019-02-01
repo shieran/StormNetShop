@@ -86,10 +86,10 @@ public class Controller {
         if (StringUtils.isBlank(goodName)) {
             return "Please specify correct good name";
         }
-        if (StringUtils.isBlank(goodName)) {
+        if (StringUtils.isBlank(count)) {
             return "Please specify correct good count";
         }
-        if (StringUtils.isBlank(goodName)) {
+        if (StringUtils.isBlank(price)) {
             return "Please specify correct good price";
         }
         return StringUtils.EMPTY;
